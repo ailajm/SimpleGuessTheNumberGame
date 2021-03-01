@@ -19,7 +19,7 @@ const game = {
             this.render(guess);
         }while(!winner);
     },
-    // Prompts user for their number guess, protects from non-applicable entries, returns user's guess.
+    // Prompts user for their number guess, protects from non-applicable entries, returns user's guess, loops if incorrect guess.
     getGuess: function() {
         let guess = NaN;
         do {
@@ -27,6 +27,7 @@ const game = {
         }while(guess < this.smallestNum || guess > this.biggestNum && guess);
         return guess;
     },
+    // Alerts user if they are correct, or not, if too high, or low, sets winner, and lists previous guess.
     render: function(guess) {
         if(guess === this.secretNum) {
             alert(`Congrats! You guessed the number in ${this.prevGuesses.length} guesses!`)
