@@ -1,5 +1,5 @@
 // **FILE LINK TEST**
-    alert('Reportin for duty!')
+    // alert('Reportin for duty!')
 
 // Game object
 const game = {
@@ -13,7 +13,11 @@ const game = {
         (this.biggestNum - this.smallestNum + 1)) + this.smallestNum;
     },
     getGuess: function() {
-        prompt(`Please enter a number between ${this.smallestNum}, and ${this.biggestNum}: `);
+        let guess = '';
+        while(guess < this.smallestNum || guess > this.biggestNum) {
+            guess = parseInt(prompt(`Please enter a number between ${this.smallestNum}, and ${this.biggestNum}: `));
+        }
+        return guess;
     }
   };
 
