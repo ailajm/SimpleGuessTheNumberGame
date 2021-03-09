@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: darkblue;
+    color: seagreen;
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+#gameBody {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
