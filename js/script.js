@@ -45,9 +45,9 @@ const game = {
     }
   };
 
+
+// PLAY BUTTON
 const $startBtn = $('#startBtn');
-
-
 $startBtn.click(function() {
     game.play();
 });
